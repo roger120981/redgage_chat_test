@@ -1,0 +1,3 @@
+#!/bin/bash
+erl -make
+erl -noshell -s make_test

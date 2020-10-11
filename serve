@@ -1,0 +1,5 @@
+#!/bin/bash                                                                     
+echo Starting main server.
+gnome-terminal -- erl -noshell -name main_server@127.0.0.1 -pa server -config server/config/main -setcookie redgage2020 -s chat_server
+echo Starting backup server.
+gnome-terminal -- erl -noshell -name backup_server@127.0.0.1 -pa server -config server/config/backup -setcookie redgage2020 -s chat_server

@@ -1,0 +1,13 @@
+#!/bin/bash
+./compile
+
+if ! ([ -f "dialyzer.plt" ]); then
+  # creates plt for first time.
+  dialyzer --build_plt --output_plt dialyzer.plt --apps erts kernel stdlib
+  dialyzer --add_to_plt --plt dialyzer.plt -r ./client
+  dialyzer --add_to_plt --plt dialyzer.plt -r ./server
+fi
+
+# running the dialyzer agains the code.
+dialyzer --plt dialyzer.plt -r ./client
+dialyzer --plt dialyzer.plt -r ./server;

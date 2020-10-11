@@ -1,0 +1,16 @@
+ %% Cover analysis level.
+ %% Level = details | overview
+ {level, details}.       
+
+ %% Directories to include in cover.
+ %% Dirs = [string()]
+ {incl_dirs, ["../"]}.
+
+ %% Specific modules to include in cover.
+ %% Mods = [atom()]
+ %% {incl_mods, Mods}.
+
+ %% Cross cover compilation
+ %% Tag = atom(), an identifier for a test run
+ %% Mod = [atom()], modules to compile for accumulated analysis
+ %% {cross,[{cover1,chat_server_gs}]}.

@@ -1,0 +1,2 @@
+#!/bin/bash                                                                     
+erl -no_shell -s xref_runner
